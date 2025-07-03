@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Alphabet Checker</title>
+</head>
+<body>
+
+  <h2>JavaScript Alphabet Checker</h2>
+  <p>Enter a single alphabet (A-Z or a-z):</p>
+
+  <input type="text" id="alphabetInput" maxlength="1">
+  <button onclick="checkAlphabet()">Check</button>
+
+  <p id="resultText"></p>
+
+  <script>
+    function checkAlphabet() {
+      let input = document.getElementById("alphabetInput").value;
+      let resultText = document.getElementById("resultText");
+
+      if ((input >= 'A' && input <= 'Z') || (input >= 'a' && input <= 'z')) {
+        resultText.textContent = "It is a valid alphabet.";
+      } else {
+        resultText.textContent = "Invalid entry.";
+      }
+    }
+  </script>
+
+</body>
+</html>

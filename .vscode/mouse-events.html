@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <body style="background-color:bisque;">
+    <center><button id="click" style="background-color: aqua;" >Click me</button></center>
+    <p id="text">Double click this text</p>
+    <P ID="heading">Hover the mouse over this text</P>
+    <p id="para">background-color will change</p>
+          <input type="text" id="keyInput" placeholder="Press any key">
+    <script>
+      document.getElementById("click").addEventListener("click",function(){
+        alert("Button is Clicked");
+      });
+
+      document.getElementById("text").addEventListener("dblclick",function()
+      {
+        this.style.color="red";
+         this.style.fontWeight="bold";
+    });
+
+    document.getElementById("heading").addEventListener("mouseover",function()
+      {
+        this.style.color="blue";
+        this.style.fontWeight="bold";
+      });
+      document.getElementById("para").addEventListener("mouseout",function()
+    {
+            this.style.backgroundColor="blue";
+            this.style.color="white";
+    });
+    document.addEventListener("keydown",function(event)
+    {
+        console.log("Key pressed: " + event.key);
+    });
+    document.addEventListener("keyup",function(event)
+    {
+        console.log("Key released: " + event.key);
+    });
+    </script>
+</body>
+</html>

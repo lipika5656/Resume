@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="dropdown">
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        </select>
+    <input type="text" id="focusInput" placeholder="Click to focus">
+    <input type="text" id="blurInput" placeholder="Click to blur">
+
+        <script>
+            document.getElementById("dropdown").addEventListener("change", function() {
+                alert("You selected: " + this.value);
+            });
+
+            document.getElementById("focusInput").addEventListener("focus", function() {
+              this.style.backgroundColor = "lightblue";
+            });
+
+            document.getElementById("blurInput").addEventListener("blur", function() {
+              this.style.backgroundColor = "pink";
+            });
+    </script>
+</body>
+</html>
